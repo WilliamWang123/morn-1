@@ -26,7 +26,7 @@ background: white;
 padding: 0 16px;
 margin-top: 8px;
 `
-const Tag: React.FC = (props) => {
+const Tag: React.FC = () => {
   const { findTag } = useTags()
   let { id } = useParams<Params>();
   const tag = findTag(parseInt(id));
@@ -38,7 +38,7 @@ const Tag: React.FC = (props) => {
         <Icon />
       </Topbar>
       <InputWrapper>
-        <Input label="标签名" type="text" placeholder="标签名" />
+        <Input label="标签名" type="text" placeholder="标签名" value={tag.name} />
       </InputWrapper>
       <Center>
         <Space />
