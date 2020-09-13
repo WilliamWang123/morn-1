@@ -69,17 +69,20 @@ function Statistics() {
                   .reduce((result, span, index, array) => result.concat(index < array.length - 1 ? [span, '，'] : [span]), [] as ReactNode[])
                 }
               </div>
-              {r.note && <div className="note">
-                {r.note}
-              </div>}
+              {
+                r.note && <div className="note">
+                  {r.note}
+                </div>
+              }
               <div className="amount">
                 ￥{r.amount}
               </div>
             </Item>;
           })}
         </div>
-      </div>)}
-    </Layout>
+      </div>)
+      }
+    </Layout >
   );
 }
 
